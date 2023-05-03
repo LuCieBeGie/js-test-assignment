@@ -41,12 +41,13 @@ const playRound = (playerSelection, computerSelection) => {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i <= 5; i++) {
         let playerSelection = prompt('Please enter your choise').toLowerCase()
         let computerSelection = computerPlay()
         if (playerScore + computerScore !== 5) {
             i = playerScore + computerScore
         }
+        console.log(i);
         playRound(playerSelection, computerSelection)
     }
     console.log(`You ${playerScore}`);
